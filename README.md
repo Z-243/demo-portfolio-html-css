@@ -1,67 +1,48 @@
-🧪 Demo Developer Portfolio
+# 🧪 Demo Developer Portfolio
 
-This is a demo portfolio website built to showcase a fictional full stack developer’s skills, projects, and contact information. It’s designed with responsiveness, interactivity, and clean visual aesthetics in mind.
-🔍 Purpose
+This is a **demo portfolio website** built to showcase a fictional full stack developer’s profile, skills, and projects. It features a clean UI, responsive design, and interactive elements — perfect as a starting template or for design practice.
 
-A frontend-only demo project to demonstrate modern web design techniques, responsive layouts, and engaging UI/UX — ideal for practice, inspiration, or as a starting point for building your own portfolio.
-✨ Key Features
+## ✨ Features
 
-    📱 Responsive Design
+- 📱 **Responsive Design**
+  - `@media (max-width: 768px)`: Mobile-friendly stacked layout
+  - `@media (min-width: 769px)`: Tablet and desktop flex/grid layout
+  - `@media (min-width: 1024px)`: Enhanced widescreen UI
 
-        @media (max-width: 768px): Mobile-friendly stacked layout
+- 🎨 **Stylish Layout**
+  - Clean, modern color palette with accent highlights
+  - Glassmorphism-style project cards
+  - Google Fonts (Inter) and Font Awesome icons
 
-        @media (min-width: 769px): Tablet/desktop grid and flex sections
+- 🧭 **Interactive UX**
+  - Smooth scroll navigation and sticky header
+  - Hover effects on buttons and links
+  - Clickable project cards with demo and GitHub links
 
-        @media (min-width: 1024px): Enhanced full-screen experience
+- 📹 **Embedded Media**
+  - Downloadable resume (PDF placeholder)
+  - Social icons linked (dummy URLs for demo)
 
-    🎨 Stylish & Clean UI
+## 🛠️ Tech Stack
 
-        Google Fonts (Inter)
+- HTML5
+- CSS3 (custom styling, media queries)
+- Font Awesome
+- Google Fonts
 
-        Subtle animations and hover effects
+## 📁 Project Structure
 
-        Modern color palette with accent highlights
-
-        Glassmorphism card design in select areas
-
-    🧭 Interactive UX
-
-        Smooth scrolling navigation
-
-        Sticky header
-
-        Clickable project cards with GitHub and live preview links
-
-        Contact form (non-functional in demo)
-
-    📷 Media Elements
-
-        Embedded video (developer intro/demo)
-
-        Social icons linked (dummy URLs)
-
-        Downloadable resume (PDF placeholder)
-
-🛠️ Tech Stack
-
-    HTML5
-
-    CSS3 (BEM-inspired naming, media queries)
-
-    Font Awesome for social/media icons
-
-    Google Fonts for typography
-
-📁 Structure
-
-index.html
-styles.css
+```
+/index.html
+/styles.css
 /public
-  ├─ images/
-  ├─ resume.pdf
+  ├─ /images
+  ├─ resume.pdf     ← Downloadable resume
   └─ favicon.ico
 README.md
+```
 
-🚀 Live Preview
+## 🚀 Live Demo
 
-👉 View Demo (hosted on Netlify)
+👉 [View Live Demo](#) *(Netlify link or GitHub Pages)*  
+

@@ -44,5 +44,5 @@ README.md
 
 ## 🚀 Live Demo
 
-👉 [https://shely-portfolio-demo.netlify.app/](#) *(Netlify link or GitHub Pages)*  
+👉 [Live Demo](#https://shely-portfolio-demo.netlify.app/)
 

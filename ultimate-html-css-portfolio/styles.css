@@ -1,0 +1,575 @@
+:root{
+    /* color for header text & highlighting */
+    --color-accent: #7be6d6;
+    --background-accent: rgba(0, 88, 84, 0.401);
+    --color-highlight: #fcfcfc;
+
+}
+
+html{
+    /* smoothly scrolls back to the top instead of jumping to the top when internal anchor link is clicked */
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Inter',sans-serif;
+    
+}
+
+body{
+    /* colored background, text, spacing */
+    background: #0f1524;
+    color: rgb(193, 210, 213);
+    padding: 2.5rem 2rem;
+    display: grid;
+    /* repeat of 1 column; minmax- width 100% */
+    /* if 2 columns; each column half the width */
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    gap: 6rem;
+
+}
+
+p::selection, 
+h1::selection,
+h2::selection, 
+h3::selection, 
+h4::selection, 
+h5::selection, 
+h6::selection,
+img::selection,
+.anchor-text::selection,
+.right-arrow::selection{
+    /* text highlight */
+    background: var(--color-accent);
+    color: rgb(18, 18, 18);
+}
+
+p,
+h3{
+    /* font sizing for content */
+    font-size: 1rem;
+    word-spacing: 1px;
+    line-height: 1.5;
+}
+
+.underlay{
+    /* background shadow */
+    position: fixed;
+    background:rgb(22, 163, 163) ;
+    inset:0;
+    opacity:0.13;
+    
+}
+
+header,
+main,
+footer{
+    /* bring text forward from underlay */
+    position: relative;
+    z-index:10;
+
+}
+
+header{
+    /* create space between header elements */
+    display: flex;               
+    flex-direction: column;
+    gap: 1rem;     
+    max-width:400px;
+}
+
+header h1,
+header h2,
+.lightText{
+    /* make headings lighter */
+    color: var(--color-highlight);
+
+}
+
+header a{
+    /* remove anchor link underline */
+    text-decoration: none;
+}
+
+header h1{
+    /* make text appear lightweight */
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+header h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.anchor-text{
+    /* style anchor tags - highlight, weight*/
+    color:var(--color-highlight);
+    text-decoration: none;
+    transition-duration: 200ms;
+    font-weight: 600;
+    font-size:1rem ;
+}
+
+.anchor-text:hover{
+    color:var(--color-accent);
+}
+
+nav{
+    /* to hide the nav section in mobile display */
+    display: none;
+}
+
+nav a{
+    /* create space between navigation-link text & nav-line */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 1.5px ;
+}
+
+.nav-line{
+    /* give dimensions to nav line */
+    height: 2px;
+    width: 40px;
+    background: var(--color-highlight);
+    transition-duration: 250ms;
+}
+
+nav a:hover .nav-line {
+    /* ADDED POST TUTORIAL */
+    background: var(--color-accent);
+    width: 70px;
+}
+
+.social-link-container{
+    /* space social-link icons  */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-link{
+    /* stylise & size the social-link icons */
+    font-size: 1.5rem;
+    color: inherit;
+    transition-duration: 200ms;
+}
+
+.social-link:hover{
+    /* highlight the social-link icons*/
+    color: var(--color-highlight);
+}
+
+main{
+    /* create space between main elements */
+    display: flex;
+    flex-direction: column;
+    gap: 4.3rem;
+}
+
+section{
+    /* space between headers & content */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem
+}
+
+section h3{
+    /* change the section headings */
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 600;
+    letter-spacing: 1.5px;
+}
+
+.sticky-header{
+    /* giving section headers sticky position*/
+    position: sticky;
+    top:0;
+    padding: 0.9rem 0rem;
+
+}
+
+.sticky-header h3{
+    /* moves the header above the transparent background */
+    position: relative;
+    z-index: 2;
+
+}
+
+.sticky-header::before{
+    /* creating a transparent backgound for sticky-header */
+    content:'';
+    position: absolute;
+    inset:0;
+    /* remove body padding from left/right of header background so it takes whole width */
+    margin-left: -2rem;
+    margin-right: -2rem;
+    background:#0e2834a2;
+    backdrop-filter: blur(5px);
+
+}    
+
+.about-contents{
+    /* create space between about elements */
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.about-contents p{
+    font-size: 1.06rem;
+}
+
+.experience-contents,
+.project-contents{
+    /* create space between experience cards & projecy cards */
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+
+}
+
+.experience-card,
+.project-card{
+    /* create space between tensure & card elements */
+     /* creates 1 column layout for card elements on mobile mode*/
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    
+}
+
+.experience-card{
+    /* create space between tensure & card elements */
+    gap: 0.4rem;
+}
+
+.project-card{
+    /* create space between image & card elements */
+    gap: 1.5rem;
+}
+
+.card-column{
+    /* create space between card elements */
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    
+}
+
+.tenure{
+    /* make text a bit darker */
+    opacity: 0.7; 
+    text-transform: uppercase;
+
+}
+
+.tenure{
+    /* decrease text size */
+    font-size: 0.9rem;
+}
+
+.anchor-icon{
+    transition-duration: 200ms;
+    padding-left: 0.3rem;
+}
+
+.anchor-text:hover .anchor-icon{
+    padding-left: 0.6rem;
+}
+
+
+.tag-container{
+    /* display tags in row that wraps*/
+    display:flex;
+    flex-wrap:wrap;
+    gap: 0.5rem;
+    color:var(--color-accent);
+
+}
+
+.tag{
+    /* to give circular background to individual tags define border-radius, padding */
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: var(--background-accent)
+
+}
+
+.tag p{
+    /* decrease font of tags */
+    font-size: 0.8rem;
+}
+
+.project-image-container{
+    /* stylise the image */
+    max-width: 340px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    order:2;
+    border-radius:0.6rem;
+    outline: 2.5px solid rgba(144, 143, 147, 0.111);
+    transition-duration: 200ms;
+
+}
+
+.project-image-container img{
+    /* makes the image content fit the container */
+    object-fit: cover;
+    width:100%;
+    height:100%;
+
+}
+
+.project-image-container:hover{
+    /* when you hover over the image outline becomes lighter */
+    outline: 2.5px solid rgba(239, 239, 239, 0.342);
+
+}
+
+
+.project-stat-link{
+    /* stylise the stats link */
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    /* stat link text overflows due to higher font-weight */
+    font-size: 0.7rem; 
+
+}
+
+.project-stat-link p{
+    /* make the stat link text smaller - needed as anchor-text has higher font-weight */
+    font-size: 0.9rem;
+}
+
+.project-archive-link{
+    /* style project-archive-link - hidhlight, weight, size limited to the left side with margin-right which creates space on the right*/
+    position: relative;
+    color:var(--color-highlight);
+    text-decoration: none;
+    transition-duration: 200ms;
+    font-weight: 600;
+    font-size:1rem ;
+    margin-right: auto;
+}
+
+.project-archive-link span{
+    /* smooth motion of arrow sign to the right */
+    transition-duration: 200ms;
+}
+
+.project-archive-link:hover span{
+    /* moves the arrow to the right */
+    padding-left: 0.5rem;
+}
+
+.project-archive-link::after{
+    /* creating a hightlight line below project-archive-link by setting its dimensions */
+    content:'';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    background: transparent;
+    transition-duration: 200ms;
+
+}
+
+.project-archive-link:hover::after{
+    /* making the hightlight line below project-archive-link appear on hover*/
+    background: var(--color-accent);
+}
+
+footer{
+    /* create space between footer elements */
+    display:flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+footer p{
+    /* style the footer text */
+    font-size: 0.9rem;
+    font-weight: 90;
+}
+
+footer .anchor-text{
+    /* change footer anchor-text - decrease the text size */
+    font-size: 0.9rem;
+    font-weight: 90;
+}
+
+.scroll-to-top{
+    /* change scroll-to-top background style */
+    text-decoration: none;
+    color: var(--color-highlight);
+    background: var(--background-accent);
+    padding: 0.4rem 0.6rem;
+    border-radius: 1rem;
+    transition-duration: 200ms;
+
+}
+
+.scroll-to-top:hover{
+    opacity: 0.6;
+}
+
+@media (min-width: 640px){
+
+    /* separate card contents int0 4 colums */
+    .project-card,
+    .experience-card{
+        grid-template-columns: repeat(4, minmax(0,1fr));
+    }    
+
+    /* make the card contents take */
+    .card-column{
+        grid-column: span 3/ span 3;
+    }
+
+    /* make the images take its original order */
+        .project-image-container{
+        order:0;
+    }
+
+    header{
+        max-width:600px;
+    }
+
+    header h1{
+    /* make text appear lightweight */
+    font-size: 3.5rem;
+    }
+
+    header h2{
+    font-size: 1.3rem;
+    }
+
+
+    
+}
+
+@media (min-width: 1024px){
+    body{
+        /* separete body into 2 columns */
+         grid-template-columns: repeat(2, minmax(0,1fr));
+         gap: 2rem;
+         padding: 0rem 1rem;
+    }
+
+    header{
+        /* make the header stick in one place */
+        position:sticky;
+        top:0;
+        /* height is as much as the space in view and doesn't take empty space below the page */
+        height: 100vh;
+        padding-bottom: 3rem;
+        /* background: blue; */
+        /* gives space to the left-hand side & thus, keeps the header in center */
+        margin-left: auto;
+    }
+
+    header h1{
+    /* make text appear lightweight */
+    font-size: 3.5rem;
+    }
+
+header h2{
+    font-size: 1.3rem;
+    }
+
+    header p{
+        /* sice down header paragraph */
+        font-size: 0.9rem;
+        max-width:420px;
+    }
+
+    nav{
+        /* display the navigation links */
+        display:flex;
+        flex-direction: column;
+        flex:1;
+        gap: 3rem;
+        padding-top: 3rem;
+
+    }
+
+    .social-link-container{
+        /* increase gap between social-links */
+        gap:1.7rem
+        
+    }
+
+    .social-link{
+        /* increase size social-link icons */
+        font-size: 1.6rem;;
+    }
+
+
+    header,
+    main{
+        /* make the header & main take about 500px or less width, same padding on top */
+        max-width: 500px;
+        width:100%;
+        padding-top: 3.5rem;
+
+    }
+
+    main{
+        /* gives space to the right-hand side & thus, keeps the main contents in center */
+        margin-right: auto;
+        gap: 3rem;
+    }
+    
+
+    .sticky-header{
+        /* remove the section headings */
+        display:none;
+    }
+
+    .project-card,
+    .experience-card {
+        /* add background to cards */
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid transparent;
+        transition-duration: 200ms;
+    }
+
+    .project-card:hover,
+    .experience-card:hover {
+        /* on hover background on cards appears */
+        background: #50515328;
+        border: 1px solid #9bada626;
+        box-shadow: 0 0 20px 3px #21293cba;
+        color: rgb(224, 232, 234);
+    }
+
+
+    .project-image-container{
+        /* make the images take its original order */
+        order:0;
+    }
+
+    footer{
+        /* position the footer below the contents  */
+        grid-column: 2 / span 2;
+        max-width:500px;
+        width: 100%;
+        padding: 3rem 0rem;
+
+
+    }
+
+
+}

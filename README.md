@@ -44,5 +44,5 @@ README.md
 
 ## 🚀 Live Demo
 
-👉 [Demo Developer Portfolio](https://google-search2-home-page.netlify.app/)
+👉 [Demo Developer Portfolio](https://shely-portfolio-demo.netlify.app/)
 
